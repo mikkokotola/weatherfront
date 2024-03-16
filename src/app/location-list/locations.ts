@@ -4,7 +4,7 @@ export interface Location {
   countryCode: string;
 }
 
-export const locations = [
+export const locations : Location [] = [
   {
     city: 'Lahti',
     country: 'Finland',

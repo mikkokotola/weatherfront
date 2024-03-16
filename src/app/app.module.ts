@@ -2,10 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpParams } from '@angular/common/http';
 
-import { WeatherComponent } from './app.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+
+import { AppComponent } from './app.component';
 import { LocationListComponent } from './location-list/location-list.component';
+import { WeatherComponent } from './weather/weather.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -14,14 +21,17 @@ import { LocationListComponent } from './location-list/location-list.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: LocationListComponent },
-    ])
+    ]),
+    BrowserAnimationsModule,
+    FormsModule, MatFormFieldModule, MatSelectModule, MatInputModule
   ],
   declarations: [
-    WeatherComponent,
-    LocationListComponent
+    AppComponent,
+    LocationListComponent,
+    WeatherComponent
   ],
   bootstrap: [
-    WeatherComponent
+    AppComponent
   ]
 })
 export class AppModule { }

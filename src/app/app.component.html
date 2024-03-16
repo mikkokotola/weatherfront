@@ -1,10 +1,9 @@
 <div class="container">
-  <router-outlet></router-outlet>
-</div>
+  <!-- <router-outlet></router-outlet> -->
+  <app-location-list (locationChange)="onLocationSelected($event)">
+  </app-location-list>
 
-<!-- <h1>Weather service</h1>
-<div>
-  <p>Location: Tampere</p>
-  <p>Temperature: clear</p>
+  <p>Selected location: {{location?.city}}</p>
+  <app-weather [location]="location">
+  </app-weather>
 </div>
- -->

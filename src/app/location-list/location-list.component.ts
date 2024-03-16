@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component,  Output, EventEmitter } from '@angular/core';
+import { Location } from './locations';
 import { locations } from './locations';
 
 @Component({
@@ -9,8 +9,10 @@ import { locations } from './locations';
 })
 export class LocationListComponent {
   locations = [...locations];
+  selectedLocation: Location | undefined;
+  @Output() locationChange = new EventEmitter<Location>();
 
-  showWeather() {
-    window.alert('Weather!');
+  onLocationChange() {
+    this.locationChange.emit(this.selectedLocation);
   }
 }

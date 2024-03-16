@@ -1,10 +1,9 @@
-<h2>Locations</h2>
-
-<div *ngFor="let location of locations">
-  <p>
-    {{ location.city }}, {{ location.country }}
-  </p>
-  <button type="button" (click)="showWeather()">
-    Show weather
-  </button>
-</div>
+<form>
+  <h4>Location</h4>
+  <mat-form-field>
+    <mat-label>Location to show weather for</mat-label>
+    <mat-select [(ngModel)]="selectedLocation" name="location" (selectionChange)="onLocationChange()">
+      <mat-option *ngFor="let location of locations" [value]="location">{{location.city}}, {{location.country}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

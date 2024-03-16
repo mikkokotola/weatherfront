@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://i2iquw1htf.execute-api.eu-north-1.amazonaws.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
