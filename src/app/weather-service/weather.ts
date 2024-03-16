@@ -1,0 +1,85 @@
+import { Timestamp } from "rxjs";
+
+export interface Weather {
+  dateTimeISO: string;
+  feelslikeC: number;
+  precipMM: number;
+  snowDepthCM: number;
+  sunriseISO: string;
+  sunsetISO: string;
+  tempC: number;
+  timestamp: number;
+  weather: string;
+  windSpeedKPH: number;
+  windDirDEG: number;
+  visibilityKM: number;
+}
+
+export const sampleWeather =
+{
+  "type": "station",
+  "timestamp": 1710588000,
+  "dateTimeISO": "2024-03-16T13:20:00+02:00",
+  "recTimestamp": 1710588345,
+  "recDateTimeISO": "2024-03-16T13:25:45+02:00",
+  "tempC": 2,
+  "tempF": 36,
+  "dewpointC": 2,
+  "dewpointF": 36,
+  "humidity": 100,
+  "pressureMB": 1004,
+  "pressureIN": 29.64,
+  "spressureMB": 990,
+  "spressureIN": 29.23,
+  "altimeterMB": 1003,
+  "altimeterIN": 29.62,
+  "windKTS": 6,
+  "windKPH": 11,
+  "windMPH": 7,
+  "windMPS": 3.09,
+  "windSpeedKTS": 6,
+  "windSpeedKPH": 11,
+  "windSpeedMPH": 7,
+  "windSpeedMPS": 3.09,
+  "windDirDEG": 20,
+  "windDir": "NNE",
+  "windGustKTS": null,
+  "windGustKPH": null,
+  "windGustMPH": null,
+  "windGustMPS": null,
+  "flightRule": "LIFR",
+  "visibilityKM": 9.656064,
+  "visibilityMI": 6,
+  "weather": "Cloudy with Light Showers",
+  "weatherShort": "Showers",
+  "weatherCoded": ":L:RW,::OV",
+  "weatherPrimary": "Showers",
+  "weatherPrimaryCoded": ":L:RW",
+  "cloudsCoded": "OV",
+  "icon": "showers.png",
+  "heatindexC": 2.2,
+  "heatindexF": 36,
+  "windchillC": -1.1,
+  "windchillF": 30,
+  "feelslikeC": -1.1,
+  "feelslikeF": 30,
+  "isDay": true,
+  "sunrise": 1710563857,
+  "sunriseISO": "2024-03-16T06:37:37+02:00",
+  "sunset": 1710606626,
+  "sunsetISO": "2024-03-16T18:30:26+02:00",
+  "snowDepthCM": null,
+  "snowDepthIN": null,
+  "precipMM": 0,
+  "precipIN": 0,
+  "solradWM2": 102,
+  "solradMethod": "estimated",
+  "ceilingFT": 300,
+  "ceilingM": 91.44,
+  "light": 67,
+  "uvi": null,
+  "QC": "O",
+  "QCcode": 10,
+  "trustFactor": 100,
+  "sky": 100
+}

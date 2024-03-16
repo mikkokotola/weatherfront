@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
+import { WeatherComponent } from './app.component';
+import { LocationListComponent } from './location-list/location-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      { path: '', component: LocationListComponent },
+    ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    WeatherComponent,
+    LocationListComponent
+  ],
+  bootstrap: [
+    WeatherComponent
+  ]
 })
 export class AppModule { }

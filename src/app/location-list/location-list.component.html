@@ -1,0 +1,10 @@
+<h2>Locations</h2>
+
+<div *ngFor="let location of locations">
+  <p>
+    {{ location.city }}, {{ location.country }}
+  </p>
+  <button type="button" (click)="showWeather()">
+    Show weather
+  </button>
+</div>
