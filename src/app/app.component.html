@@ -3,7 +3,7 @@
   <app-location-list (locationChange)="onLocationSelected($event)">
   </app-location-list>
 
-  <p>Selected location: {{location?.city}}</p>
+  <p>Selected location: {{location?.city}}, {{location?.country}}</p>
   <app-weather [location]="location">
   </app-weather>
 </div>
