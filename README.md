@@ -3,6 +3,8 @@ A simple weather app frontend (PoC, not a full functional app) for displaying th
 
 There is a related backend that uses Vaisala XWeather API, AWS CDK, Lambda, Api Gateway and Secrets Manager. Backend repo: https://github.com/mikkokotola/weather.
 
+For deploying the frontend in AWS (using S3 & Cloudfront), you can use the IaC code (AWS CDK) in the repo https://github.com/mikkokotola/weather-front-stack.
+
 ## Architecture
 ![Weather app architecture](Weather_architecture.png)
 
